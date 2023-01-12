@@ -15,9 +15,7 @@ class LinearRegression:
         self.x = np.array(x)
         self.y = np.array(y)
         self.n = len(self.x)
-        #coeficiente angular
         self.b = self.coef_()
-        #intercepto
         self.a = self.intercept_()
         print('Sucess')
     
@@ -32,5 +30,5 @@ class LinearRegression:
     
     
     def intercept_(self):
-        self.intercept_ (np.sum(self.y) - self.b * np.sum(self.x)) / self.n
+        self.intercept_ = (np.sum(self.y) - self.b * np.sum(self.x)) / self.n
         return self.intercept_
