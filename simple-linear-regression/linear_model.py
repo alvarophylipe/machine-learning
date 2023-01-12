@@ -7,6 +7,8 @@ class LinearRegression:
         self.a:np.array
         self.b:np.array
         self.n:np.int16
+        self.coef_:np.float32
+        self.intercept_:np.float32
     
     
     def fit(self, x, y):
@@ -25,8 +27,10 @@ class LinearRegression:
     
     
     def coef_(self):
-        return (self.n * np.sum(self.x * self.y) - np.sum(self.x) * np.sum(self.y)) / (self.n * np.sum(self.x ** 2) - (np.sum(self.x) ** 2))
+        self.coef_ = (self.n * np.sum(self.x * self.y) - np.sum(self.x) * np.sum(self.y)) / (self.n * np.sum(self.x ** 2) - (np.sum(self.x) ** 2))
+        return self.coef_
     
     
     def intercept_(self):
-        return (np.sum(self.y) - self.b * np.sum(self.x)) / self.n
+        self.intercept_ (np.sum(self.y) - self.b * np.sum(self.x)) / self.n
+        return self.intercept_
