@@ -3,7 +3,6 @@
 
 #### -- Project Status: Completed
 
-## Project Intro/Objective
 The purpose of the project is to apply mahcine learning knowledge about linear regression, building a class that performs linear regression using only the numpy library.
 
 ### Methods Used
